@@ -1,5 +1,5 @@
-import { useReducer } from 'react';
-import taskReducer from './reducers/taskReducer';
+import { useContext } from 'react';
+import TasksContext from './contexts/textContext';
 
 export interface Task {
 	id: number;
@@ -7,7 +7,7 @@ export interface Task {
 }
 
 const TaskList = () => {
-	const [tasks, dispatch] = useReducer(taskReducer, []);
+	const { tasks, dispatch } = useContext(TasksContext);
 
 	return (
 		<>
