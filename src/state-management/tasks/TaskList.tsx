@@ -1,4 +1,4 @@
-import useTask from './hooks/useTask';
+import useTask from './useTask';
 
 export interface Task {
 	id: number;
